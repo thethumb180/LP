@@ -1,0 +1,42 @@
+.main-container {
+
+  &__video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &__wrapper {
+    height: 100vh;
+  }
+
+  &__box {
+    width: 50%;
+    height: 50vh;
+    background-color: red;
+    animation-name: box-bg;
+    animation-duration: 4s;
+    position: relative;
+    text-align: center;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  &__header {
+    color: $white;
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    @include media-breakpoint-up(md) {
+      font-size: 2rem;
+    }
+  }
+}
